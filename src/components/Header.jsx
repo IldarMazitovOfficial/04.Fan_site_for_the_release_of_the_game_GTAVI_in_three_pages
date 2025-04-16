@@ -147,7 +147,7 @@ function App() {
 }
 
 .gta-title {
-  animation: glowEffect 30s infinite; /* Более продолжительный эффект */
+  animation: glowEffect 22s infinite; /* Более продолжительный эффект */
   animation-delay: 5s;
 }
 
