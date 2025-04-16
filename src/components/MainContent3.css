@@ -1,0 +1,80 @@
+/* Эффект свечения для всей страницы */
+.main-content {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding-top: 50px;
+  position: relative;
+  animation: glowEffect 2s ease-in-out;
+}
+
+@keyframes glowEffect {
+  0% {
+    opacity: 0;
+    filter: brightness(0);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+}
+
+/* Стиль для ТМ */
+.trademark {
+  position: absolute;
+  top: 55px;
+  right: 29%;
+  color: white;
+  font-size: 0.8rem;
+}
+
+/* Стиль для изображения */
+.main-image {
+  max-width: 65%; /* Уменьшено на 30% от 100% */
+  max-height: 65%; /* Уменьшено на 30% от 100% */
+  margin: 0 auto;
+  opacity: 0; /* Начальное состояние: полностью прозрачное */
+  transition: opacity 4s ease-in-out; /* Плавный переход длительностью 4 секунды */
+}
+
+.main-image.fade-in {
+  opacity: 1; /* Конечное состояние: полностью видимое */
+}
+
+/* Стиль для текста */
+.main-text {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Анимация появления текста */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 768px) {
+  .main-text {
+    font-size: 2rem;
+  }
+  .trademark {
+    font-size: 0.6rem;
+    top: 40px;
+  }
+}
