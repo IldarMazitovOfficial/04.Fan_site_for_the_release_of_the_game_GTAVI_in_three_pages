@@ -92,10 +92,59 @@
   align-items: center;
   margin-top: 320px;
   gap: 550px; /* Расстояние между картинками */
+  opacity: 0; /* Начальное состояние: полностью прозрачное */
+  transform: translateY(100px); /* Начальное положение: ниже экрана */
+  animation: slideUp 3s ease-in-out forwards; /* Анимация появления */
+  animation-delay: 7.5s; /* Задержка после появления текста */
+}
+
+/* Анимация появления снизу */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .row-image {
   width: 40px; /* Фиксированная ширина */
   height: 40px; /* Фиксированная высота */
-  border-radius: 0px; /* Скругленные углы (опционально) */
+  border-radius: 0px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Эффекты свечения для каждой картинки */
+
+/* бел картинка */
+.row-image.yellow:hover {
+  transform: scale(1.2); /* Увеличение картинки */
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); /* Желтое свечение */
+}
+
+/* бел картинка */
+.row-image.blue:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); /* Синее свечение */
+}
+
+/* голуб картинка */
+.row-image.green:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px 5px rgba(0, 162, 255, 0.8); /* Зеленое свечение */
+}
+
+/* бел картинка */
+.row-image.red:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); /* Красное свечение */
+}
+
+/* оранж картинка */
+.row-image.white:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px 5px rgba(253, 135, 0, 0.8); /* Белое свечение */
 }

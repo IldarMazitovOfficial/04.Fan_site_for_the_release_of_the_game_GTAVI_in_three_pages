@@ -37,19 +37,19 @@ function MainContent3() {
       {/* Ряд из 5 картинок в самом низу с добавленными ссылками */}
       <div className="image-row">
         <a href="https://www.esrb.org" target="_blank" rel="noopener noreferrer">
-          <img src="/Screenshot_2.png" alt="Screenshot 2" className="row-image" />
+          <img src="/Screenshot_2.png" alt="Screenshot 2" className="row-image yellow" />
         </a>
         <a href="https://www.playstation.com" target="_blank" rel="noopener noreferrer">
-          <img src="/maxresdefault.jpg" alt="Maxres Default" className="row-image" />
+          <img src="/maxresdefault.jpg" alt="Maxres Default" className="row-image blue" />
         </a>
         <a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer">
-          <img src="/копия.png" alt="Копия" className="row-image" />
+          <img src="/копия.png" alt="Копия" className="row-image green" />
         </a>
         <a href="https://www.xbox.com" target="_blank" rel="noopener noreferrer">
-          <img src="/xbox-battle-net.jpg" alt="Xbox Battle Net" className="row-image" />
+          <img src="/xbox-battle-net.jpg" alt="Xbox Battle Net" className="row-image red" />
         </a>
         <a href="https://www.rockstargames.com" target="_blank" rel="noopener noreferrer">
-          <img src="/Screenshot_1.png" alt="Screenshot 1" className="row-image" />
+          <img src="/Screenshot_1.png" alt="Screenshot 1" className="row-image white" />
         </a>
       </div>
     </div>
