@@ -1,3 +1,9 @@
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Эффект свечения для всей страницы */
 .main-content {
   height: 100vh;
@@ -39,6 +45,7 @@
   margin: 0 auto;
   opacity: 0; /* Начальное состояние: полностью прозрачное */
   transition: opacity 4s ease-in-out; /* Плавный переход длительностью 4 секунды */
+  object-fit: contain; /* Гарантирует сохранение пропорций */
 }
 
 .main-image.fade-in {
@@ -48,7 +55,7 @@
 /* Стиль для текста */
 .main-text {
   position: absolute;
-  bottom: 100px;
+  bottom: 300px;
   left: 50%;
   transform: translateX(-50%);
   color: white;
@@ -79,3 +86,16 @@
   }
 }
 
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 320px;
+  gap: 550px; /* Расстояние между картинками */
+}
+
+.row-image {
+  width: 40px; /* Фиксированная ширина */
+  height: 40px; /* Фиксированная высота */
+  border-radius: 0px; /* Скругленные углы (опционально) */
+}

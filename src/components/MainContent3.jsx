@@ -11,7 +11,7 @@ function MainContent3() {
       setShowImage(true);
     }, 2500);
 
-    // Задержка появления текста (включая "ТМ") на 7 секунд
+    // Задержка появления текста на 7 секунд
     const textTimer = setTimeout(() => {
       setShowText(true);
     }, 7000);
@@ -24,9 +24,6 @@ function MainContent3() {
 
   return (
     <div className="main-content">
-      {showText && (
-        <div className="trademark">ТМ</div> // Появляется одновременно с основным текстом
-      )}
       <img
         src="/2maxresdefault.png" // Оставляем только одну картинку
         alt="Центральное изображение"
@@ -37,6 +34,24 @@ function MainContent3() {
           Скоро на PlayStation 5|Pro, Xbox Series X|S и PC.
         </div>
       )}
+      {/* Ряд из 5 картинок в самом низу с добавленными ссылками */}
+      <div className="image-row">
+        <a href="https://www.esrb.org" target="_blank" rel="noopener noreferrer">
+          <img src="/Screenshot_2.png" alt="Screenshot 2" className="row-image" />
+        </a>
+        <a href="https://www.playstation.com" target="_blank" rel="noopener noreferrer">
+          <img src="/maxresdefault.jpg" alt="Maxres Default" className="row-image" />
+        </a>
+        <a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer">
+          <img src="/копия.png" alt="Копия" className="row-image" />
+        </a>
+        <a href="https://www.xbox.com" target="_blank" rel="noopener noreferrer">
+          <img src="/xbox-battle-net.jpg" alt="Xbox Battle Net" className="row-image" />
+        </a>
+        <a href="https://www.rockstargames.com" target="_blank" rel="noopener noreferrer">
+          <img src="/Screenshot_1.png" alt="Screenshot 1" className="row-image" />
+        </a>
+      </div>
     </div>
   );
 }
