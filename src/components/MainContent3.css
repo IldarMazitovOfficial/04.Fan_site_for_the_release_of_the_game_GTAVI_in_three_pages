@@ -29,15 +29,6 @@
   }
 }
 
-/* Стиль для ТМ */
-.trademark {
-  position: absolute;
-  top: 55px;
-  right: 29%;
-  color: white;
-  font-size: 0.8rem;
-}
-
 /* Стиль для изображения */
 .main-image {
   max-width: 65%; /* Уменьшено на 30% от 100% */
@@ -75,38 +66,43 @@
   }
 }
 
-/* Адаптивность для маленьких экранов */
-@media (max-width: 768px) {
-  .main-text {
-    font-size: 2rem;
-  }
-  .trademark {
-    font-size: 0.6rem;
-    top: 40px;
-  }
+.main-text-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 240px; /* Опускаем текст ниже */
+  font-size: 12px; /* Уменьшаем шрифт на 70% */
+  color: #fff; /* Цвет текста */
+  opacity: 100; /* Легкая прозрачность */
+  text-align: center; /* Выравниваем текст по центру */
+  visibility: hidden; /* Начальное состояние: элемент невидим */
+  animation: slideUp 7s ease-in-out forwards; /* Анимация появления */
+  animation-delay: 9s; /* Задержка после появления текста */
+  transform: translateY(300px); /* Начальное положение: ниже экрана */
 }
 
 .image-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 320px;
+  margin-top: 60px;
   gap: 550px; /* Расстояние между картинками */
-  opacity: 0; /* Начальное состояние: полностью прозрачное */
-  transform: translateY(100px); /* Начальное положение: ниже экрана */
-  animation: slideUp 3s ease-in-out forwards; /* Анимация появления */
-  animation-delay: 7.5s; /* Задержка после появления текста */
+  visibility: hidden; /* Начальное состояние: элемент невидим */
+  transform: translateY(350px); /* Начальное положение: ниже экрана */
+  animation: slideUp 7s ease-in-out forwards; /* Анимация появления */
+  animation-delay: 7s; /* Задержка после появления текста */
 }
 
 /* Анимация появления снизу */
 @keyframes slideUp {
   0% {
-    opacity: 0;
+    visibility: hidden;
     transform: translateY(100px);
   }
   100% {
-    opacity: 1;
+    visibility: visible;
     transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -115,6 +111,7 @@
   height: 40px; /* Фиксированная высота */
   border-radius: 0px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: transparent;
 }
 
 /* Эффекты свечения для каждой картинки */
@@ -122,29 +119,29 @@
 /* бел картинка */
 .row-image.yellow:hover {
   transform: scale(1.2); /* Увеличение картинки */
-  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); /* Желтое свечение */
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); /* бел свечение */
 }
 
 /* бел картинка */
 .row-image.blue:hover {
   transform: scale(1.2);
-  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); /* Синее свечение */
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); /* бел свечение */
 }
 
 /* голуб картинка */
 .row-image.green:hover {
   transform: scale(1.2);
-  box-shadow: 0 0 20px 5px rgba(0, 162, 255, 0.8); /* Зеленое свечение */
+  box-shadow: 0 0 20px 5px rgba(0, 162, 255, 0.8); /* голуб свечение */
 }
 
 /* бел картинка */
 .row-image.red:hover {
   transform: scale(1.2);
-  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); /* Красное свечение */
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); /* бел свечение */
 }
 
 /* оранж картинка */
 .row-image.white:hover {
   transform: scale(1.2);
-  box-shadow: 0 0 20px 5px rgba(253, 135, 0, 0.8); /* Белое свечение */
+  box-shadow: 0 0 20px 5px rgba(253, 135, 0, 0.8); /* оранж свечение */
 }
