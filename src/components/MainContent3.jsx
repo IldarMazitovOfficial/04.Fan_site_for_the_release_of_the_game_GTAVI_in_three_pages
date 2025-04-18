@@ -34,9 +34,16 @@ function MainContent3() {
           Скоро на PlayStation 5|Pro, Xbox Series X|S и PC.
         </div>
       )}
-      <div className="main-text-small"> {/* Добавляем текст с меньшим размером */}
-        Rockstar Games | 2025 | by Ildar Mazitov.
-      </div>
+      <div className="main-text-small">
+  <a 
+    href="https://t.me/Ildarmazitovfanzilovich" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    style={{ textDecoration: 'underline', color: 'white', textUnderlineOffset: '5px'}}
+  >
+    Rockstar Games | 2025 | by Ildar Mazitov
+  </a>
+</div>
       {/* Ряд из 5 картинок в самом низу с добавленными ссылками */}
       <div className="image-row">
         <a href="https://www.esrb.org" target="_blank" rel="noopener noreferrer">

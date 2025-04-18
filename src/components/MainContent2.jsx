@@ -6,7 +6,7 @@ export function MainContent2() {
   const handleSearch = (e) => {
     if (e.key === 'Enter' && query.trim().length > 0) {
       const encodedQuery = encodeURIComponent(query.trim());
-      window.location.href = `https://chatgpt.com/?q=${encodedQuery}`; // Перенаправляем пользователя на сайт ChatGPT с запросом
+      window.open(`https://chatgpt.com/?q=${encodedQuery}`,'_blank');
     }
   };
 
