@@ -73,12 +73,13 @@
   margin-top: 240px; /* Опускаем текст ниже */
   font-size: 12px; /* Уменьшаем шрифт на 70% */
   color: #fff; /* Цвет текста */
-  opacity: 100; /* Легкая прозрачность */
+  opacity: 0; /* Легкая прозрачность */
   text-align: center; /* Выравниваем текст по центру */
   visibility: hidden; /* Начальное состояние: элемент невидим */
   animation: slideUp 7s ease-in-out forwards; /* Анимация появления */
-  animation-delay: 9s; /* Задержка после появления текста */
+  animation-delay: 7s; /* Задержка после появления текста */
   transform: translateY(300px); /* Начальное положение: ниже экрана */
+  letter-spacing: 2px; /* Расстояние между буквами */
 }
 
 .image-row {
@@ -97,7 +98,8 @@
 @keyframes slideUp {
   0% {
     visibility: hidden;
-    transform: translateY(100px);
+    transform: translateY(300px);
+    opacity: 0;
   }
   100% {
     visibility: visible;
